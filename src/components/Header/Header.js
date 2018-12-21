@@ -1,11 +1,12 @@
 import React from "react";
+import "./Header.css";
+
 
 const Header = props => (
   <div className="container-fluid">
 
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar">
      <span className="navbar-brand mb-0 h1">Clicky Game</span>
-     <span className="navbar-brand mb-0 h1">Click an image to begin!</span>
      <span className="navbar-brand mb-0 h1">Score: {props.currentScore} | Top Score: {props.topScore} </span>
     </nav>
 

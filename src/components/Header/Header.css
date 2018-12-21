@@ -1,0 +1,13 @@
+body {
+    background: rgb(180, 177, 198);
+}
+
+nav {
+    background: rgb(41, 3, 79);
+    color: rgb(238, 238, 224);
+}
+
+.jumbotron {
+    background: rgba(213, 187, 233, 0.6);
+    color: rgb(68, 59, 101);
+}
