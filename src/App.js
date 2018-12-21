@@ -1,28 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Wrapper from "./components/Wrapper";
+import Header from "./components/Header";
+import ImageCard from "./components/ImageCard";
+import images from "../src/images.json";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+// Set this.state.images to the images json array
+  state = {
+    images
+  };
+
+// Map over this.state.images to render an ImageCard component for each image 
+render() {
+  return (
+    <Wrapper>
+      <Header />
+      {this.state.images.map(image => (
+      <ImageCard
+        id={image.id}
+        name={image.name}
+        image={image.image}
+      />
+    ))}
+    </Wrapper>
+  );
 }
+}
+
 
 export default App;
